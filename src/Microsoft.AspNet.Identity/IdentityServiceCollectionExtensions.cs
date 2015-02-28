@@ -92,20 +92,20 @@ namespace Microsoft.Framework.DependencyInjection
             services.Configure<CookieAuthenticationOptions>(options =>
             {
                 options.AuthenticationScheme = IdentityOptions.ExternalCookieAuthenticationScheme;
-                options.AuthenticationMode = AuthenticationMode.Passive;
+                options.AutomaticAuthentication = false;
                 options.CookieName = IdentityOptions.ExternalCookieAuthenticationScheme;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
             }, IdentityOptions.ExternalCookieAuthenticationScheme);
             services.Configure<CookieAuthenticationOptions>(options =>
             {
                 options.AuthenticationScheme = IdentityOptions.TwoFactorRememberMeCookieAuthenticationScheme;
-                options.AuthenticationMode = AuthenticationMode.Passive;
+                options.AutomaticAuthentication = false;
                 options.CookieName = IdentityOptions.TwoFactorRememberMeCookieAuthenticationScheme;
             }, IdentityOptions.TwoFactorRememberMeCookieAuthenticationScheme);
             services.Configure<CookieAuthenticationOptions>(options =>
             {
                 options.AuthenticationScheme = IdentityOptions.TwoFactorUserIdCookieAuthenticationScheme;
-                options.AuthenticationMode = AuthenticationMode.Passive;
+                options.AutomaticAuthentication = false;
                 options.CookieName = IdentityOptions.TwoFactorUserIdCookieAuthenticationScheme;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
             }, IdentityOptions.TwoFactorUserIdCookieAuthenticationScheme);
